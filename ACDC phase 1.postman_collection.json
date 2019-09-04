@@ -23,7 +23,9 @@
 							"",
 							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
 							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
-							"});"
+							"});",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -92,6 +94,24 @@
 							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
 							"});",
 							"",
+							"",
+							"var i=+pm.environment.get(\"iterationcount\");",
+							"",
+							" if(i%2===0)",
+							"    {         ",
+							"               //pm.sendRequest(\"192.168.124.184:8081/RMS/v1.0/client/doOlaWithdraw\");   ",
+							"               postman.setNextRequest(\"doOlaWithdraw\")",
+							"            i=i+1;",
+							"             pm.environment.set(\"iterationcount\", i);",
+							"       }",
+							"        else",
+							"        {",
+							"    //pm.sendRequest(\"192.168.124.184:8081/RMS/v1.0/client/doOlaDepositReturn\");   ",
+							"        postman.setNextRequest(\"doOlaDepositReturn\")",
+							"        i=i+1;",
+							"        pm.environment.set(\"iterationcount\", i);",
+							"",
+							" }",
 							""
 						],
 						"type": "text/javascript"
@@ -132,7 +152,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"appType\": \"Web_Panel\",\n  \"clientIp\": \"string\",\n  \"device\": \"MOBILE\",\n  \"domainId\": 1,\n  \"engineMasterTxnId\": \"string\",\n  \"engineServiceId\": \"OLA\",\n  \"terminalId\": \"123456\",\n  \"txnData\": {\n    \"engineGameId\": \"1\",\n    \"engineReference1\": \"string\",\n    \"engineReference2\": \"string\",\n    \"engineReference3\": \"string\",\n    \"engineReference4\": \"string\",\n    \"engineReference5\": \"string\",\n    \"engineReference6\": \"string\",\n    \"engineReference7\": \"string\",\n    \"engineTxnId\": \"{{enginetxnid}}\",\n    \"gameName\": \"string\",\n         \"txnValue\": \"1000\"\n    },\n  \"txnTypeCode\": \"DEPOSIT\",\n  \"userId\": {{userid}}\n}"
+					"raw": "{\n  \"appType\": \"Web_Panel\",\n  \"clientIp\": \"string\",\n  \"device\": \"MOBILE\",\n  \"domainId\": 1,\n  \"engineMasterTxnId\": \"string\",\n  \"engineServiceId\": \"OLA\",\n  \"terminalId\": \"123456\",\n  \"txnData\": {\n    \"engineGameId\": \"1\",\n    \"engineReference1\": \"string\",\n    \"engineReference2\": \"string\",\n    \"engineReference3\": \"string\",\n    \"engineReference4\": \"string\",\n    \"engineReference5\": \"string\",\n    \"engineReference6\": \"string\",\n    \"engineReference7\": \"string\",\n    \"engineTxnId\": \"{{enginetxnid}}\",\n    \"gameName\": \"string\",\n         \"txnValue\": \"1\"\n    },\n  \"txnTypeCode\": \"DEPOSIT\",\n  \"userId\": {{userid}}\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/client/doOlaDeposit"
 			},
@@ -275,9 +295,7 @@
 							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
 							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
 							"});",
-							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
-							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
