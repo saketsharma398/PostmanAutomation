@@ -274,6 +274,9 @@
 							"",
 							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
 							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
+							"});",
+							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
+							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
 							"});"
 						],
 						"type": "text/javascript"
