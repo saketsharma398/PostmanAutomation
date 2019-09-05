@@ -36,12 +36,12 @@
 				"header": [
 					{
 						"key": "userName",
-						"value": "sub",
+						"value": "37s",
 						"type": "text"
 					},
 					{
 						"key": "password",
-						"value": "12345",
+						"value": "12345678",
 						"type": "text"
 					},
 					{
@@ -99,14 +99,12 @@
 							"",
 							" if(i%2===0)",
 							"    {         ",
-							"               //pm.sendRequest(\"192.168.124.184:8081/RMS/v1.0/client/doOlaWithdraw\");   ",
 							"               postman.setNextRequest(\"doOlaWithdraw\")",
 							"            i=i+1;",
 							"             pm.environment.set(\"iterationcount\", i);",
 							"       }",
 							"        else",
 							"        {",
-							"    //pm.sendRequest(\"192.168.124.184:8081/RMS/v1.0/client/doOlaDepositReturn\");   ",
 							"        postman.setNextRequest(\"doOlaDepositReturn\")",
 							"        i=i+1;",
 							"        pm.environment.set(\"iterationcount\", i);",
@@ -152,7 +150,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"appType\": \"Web_Panel\",\n  \"clientIp\": \"string\",\n  \"device\": \"MOBILE\",\n  \"domainId\": 1,\n  \"engineMasterTxnId\": \"string\",\n  \"engineServiceId\": \"OLA\",\n  \"terminalId\": \"123456\",\n  \"txnData\": {\n    \"engineGameId\": \"1\",\n    \"engineReference1\": \"string\",\n    \"engineReference2\": \"string\",\n    \"engineReference3\": \"string\",\n    \"engineReference4\": \"string\",\n    \"engineReference5\": \"string\",\n    \"engineReference6\": \"string\",\n    \"engineReference7\": \"string\",\n    \"engineTxnId\": \"{{enginetxnid}}\",\n    \"gameName\": \"string\",\n         \"txnValue\": \"1\"\n    },\n  \"txnTypeCode\": \"DEPOSIT\",\n  \"userId\": {{userid}}\n}"
+					"raw": "{\n  \"appType\": \"Web_Panel\",\n  \"clientIp\": \"string\",\n  \"device\": \"MOBILE\",\n  \"domainId\": 1,\n  \"engineMasterTxnId\": \"string\",\n  \"engineServiceId\": \"OLA\",\n  \"terminalId\": \"123456\",\n  \"txnData\": {\n    \"engineGameId\": \"1\",\n    \"engineReference1\": \"string\",\n    \"engineReference2\": \"string\",\n    \"engineReference3\": \"string\",\n    \"engineReference4\": \"string\",\n    \"engineReference5\": \"string\",\n    \"engineReference6\": \"string\",\n    \"engineReference7\": \"string\",\n    \"engineTxnId\": \"{{enginetxnid}}\",\n    \"gameName\": \"string\",\n         \"txnValue\": \"2000\"\n    },\n  \"txnTypeCode\": \"DEPOSIT\",\n  \"userId\": {{userid}}\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/client/doOlaDeposit"
 			},
@@ -162,26 +160,28 @@
 			"name": "doOlaDepositReturn",
 			"event": [
 				{
-					"listen": "prerequest",
+					"listen": "test",
 					"script": {
-						"id": "7485026f-a523-4efa-af89-d75f503236bf",
+						"id": "187ac8b0-70c1-4336-b616-d33893958c57",
 						"exec": [
-							"var rnd = Math.floor((Math.random() * 10000) + 1);",
-							"postman.setEnvironmentVariable(\"enginetxnid3\", \"engine\"+rnd);",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
+							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
+							"});",
+							"",
 							""
 						],
 						"type": "text/javascript"
 					}
 				},
 				{
-					"listen": "test",
+					"listen": "prerequest",
 					"script": {
-						"id": "f12e8e99-389c-43bb-b900-bba633091d17",
+						"id": "04b65157-6c2d-4cf9-b7d9-62e9ab41b489",
 						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
-							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
-							"});"
+							"var rnd = Math.floor((Math.random() * 10000) + 1);",
+							"postman.setEnvironmentVariable(\"enginetxnid3\", \"engine\"+rnd);",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -274,7 +274,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"appType\": \"Web_Panel\",\n  \"clientIp\": \"string\",\n  \"device\": \"MOBILE\",\n  \"domainId\": 1,\n  \"engineMasterTxnId\": \"string\",\n  \"engineServiceId\": \"OLA\",\n  \"terminalId\": \"123456\",\n  \"txnData\": {\n    \"engineGameId\": \"1\",\n    \"engineReference1\": \"string\",\n    \"engineReference2\": \"string\",\n    \"engineReference3\": \"string\",\n    \"engineReference4\": \"string\",\n    \"engineReference5\": \"string\",\n    \"engineReference6\": \"string\",\n    \"engineReference7\": \"string\",\n    \"engineTxnId\": \"{{enginetxnid1}}\",\n    \"gameName\": \"string\",\n         \"txnValue\": \"1000\"\n    },\n  \"txnTypeCode\": \"WITHDRAWAL\",\n  \"userId\": {{userid}}\n}"
+					"raw": "{\n  \"appType\": \"Web_Panel\",\n  \"clientIp\": \"string\",\n  \"device\": \"MOBILE\",\n  \"domainId\": 1,\n  \"engineMasterTxnId\": \"string\",\n  \"engineServiceId\": \"OLA\",\n  \"terminalId\": \"123456\",\n  \"txnData\": {\n    \"engineGameId\": \"1\",\n    \"engineReference1\": \"string\",\n    \"engineReference2\": \"string\",\n    \"engineReference3\": \"string\",\n    \"engineReference4\": \"string\",\n    \"engineReference5\": \"string\",\n    \"engineReference6\": \"string\",\n    \"engineReference7\": \"string\",\n    \"engineTxnId\": \"{{enginetxnid1}}\",\n    \"gameName\": \"string\",\n         \"txnValue\": \"500\"\n    },\n  \"txnTypeCode\": \"WITHDRAWAL\",\n  \"userId\": {{userid}}\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/client/doOlaWithdraw"
 			},
@@ -595,6 +595,18 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1e284e8f-a1c1-4a1a-aae8-e8787d30d32f",
+						"exec": [
+							"var rnd = Math.floor((Math.random() * 10000) + 1);",
+							"postman.setEnvironmentVariable(\"creditnote\", \"credit note\"+rnd);",
+							""
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -615,7 +627,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"amount\": \"1\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"credit note\"\n}"
+					"raw": "{\n    \"amount\": \"1\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"{{creditnote}}\"\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/doCreditNote"
 			},
@@ -817,6 +829,17 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e6da394a-ea8a-43ec-b4b6-82d7ba1f7f3b",
+						"exec": [
+							"var rnd = Math.floor((Math.random() * 10000) + 1);",
+							"postman.setEnvironmentVariable(\"debitnote\", \"debit note \"+rnd);"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -837,7 +860,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"amount\": \"1\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"Debit note\"\n}"
+					"raw": "{\n    \"amount\": \"3\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"{{debitnote}}\"\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/doDebitNote"
 			},
@@ -1039,6 +1062,17 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7efb7e8-2aed-4a7e-9a4e-a05f252b3367",
+						"exec": [
+							"var rnd = Math.floor((Math.random() * 10000) + 1);",
+							"postman.setEnvironmentVariable(\"cashpayment\", \"cash payment \"+rnd);"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -1048,9 +1082,9 @@
 				"method": "POST",
 				"header": [
 					{
+						"description": "Bearer Token",
 						"key": "Authorization",
-						"value": "Bearer {{backtoken}}",
-						"description": "Bearer Token"
+						"value": "Bearer {{backtoken}}"
 					},
 					{
 						"key": "Content-Type",
@@ -1059,7 +1093,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"amount\": \"1\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"Cash Payment\"\n}"
+					"raw": "{\n    \"amount\": \"1\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"{{cashpayment}}\"\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/doPayment"
 			},
@@ -1271,12 +1305,12 @@
 				"header": [
 					{
 						"key": "userName",
-						"value": "head",
+						"value": "37h",
 						"type": "text"
 					},
 					{
 						"key": "password",
-						"value": "12345",
+						"value": "12345678",
 						"type": "text"
 					},
 					{
