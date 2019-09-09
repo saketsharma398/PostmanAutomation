@@ -25,7 +25,9 @@
 							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
 							"});",
 							"",
-							""
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -36,7 +38,7 @@
 				"header": [
 					{
 						"key": "userName",
-						"value": "37s",
+						"value": "orgs",
 						"type": "text"
 					},
 					{
@@ -85,32 +87,37 @@
 						"id": "0c31a0aa-3da2-4222-9019-7187c1a52d45",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"successful deposit done with status code  \"+jsonData.responseData.statusCode, function () {",
+							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
+							"});",
+							"",
+							"if(+jsonData.responseData.statusCode===0)",
+							"{",
 							"var txnId=jsonData.responseData.txnData.txnId;",
 							"pm.environment.set(\"Txnid\",txnId);",
 							"var txnValue=jsonData.responseData.txnData.txnValue;",
 							"pm.environment.set(\"txnvalue\",txnValue);",
-							"",
-							"pm.test(\"Your test name\"+jsonData.responseData.statusCode, function () {",
-							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
-							"});",
-							"",
-							"",
+							"}",
 							"var i=+pm.environment.get(\"iterationcount\");",
 							"",
 							" if(i%2===0)",
-							"    {         ",
-							"               postman.setNextRequest(\"doOlaWithdraw\")",
-							"            i=i+1;",
+							"   {         ",
+							"             postman.setNextRequest(\"doOlaWithdraw\")",
+							"           i=i+1;",
 							"             pm.environment.set(\"iterationcount\", i);",
 							"       }",
-							"        else",
-							"        {",
+							"       else",
+							"       {",
 							"        postman.setNextRequest(\"doOlaDepositReturn\")",
-							"        i=i+1;",
+							"      i=i+1;",
 							"        pm.environment.set(\"iterationcount\", i);",
 							"",
 							" }",
-							""
+							"",
+							"",
+							"pm.test(\"test for pending bill error message is \"+jsonData.responseData.message, function () {",
+							"    pm.expect(+jsonData.responseData.statusCode).to.eql(1139);",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -584,26 +591,26 @@
 			"name": "credit note",
 			"event": [
 				{
-					"listen": "test",
+					"listen": "prerequest",
 					"script": {
-						"id": "64460cb8-568a-4440-a852-15ba10ea434b",
+						"id": "011b7d64-da2e-4ab2-be17-d883b4ffeb28",
 						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
-							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
-							"});"
+							"var rnd = Math.floor((Math.random() * 10000) + 1);",
+							"postman.setEnvironmentVariable(\"creditnote\", \"credit note \"+rnd);",
+							""
 						],
 						"type": "text/javascript"
 					}
 				},
 				{
-					"listen": "prerequest",
+					"listen": "test",
 					"script": {
-						"id": "1e284e8f-a1c1-4a1a-aae8-e8787d30d32f",
+						"id": "cc6767a0-06ed-4f51-8880-a89522c83a52",
 						"exec": [
-							"var rnd = Math.floor((Math.random() * 10000) + 1);",
-							"postman.setEnvironmentVariable(\"creditnote\", \"credit note\"+rnd);",
-							""
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
+							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -860,7 +867,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"amount\": \"3\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"{{debitnote}}\"\n}"
+					"raw": "{\n    \"amount\": \"300\",\n    \"appType\": \"Web_Panel\",\n    \"clientIp\": \"192.168.124.154\",\n    \"device\": \"MOBILE\",\n    \"orgId\": \"{{orgid}}\",\n    \"remarks\": \"{{debitnote}}\"\n}"
 				},
 				"url": "{{baseUrl}}/v1.0/doDebitNote"
 			},
@@ -1305,7 +1312,7 @@
 				"header": [
 					{
 						"key": "userName",
-						"value": "37h",
+						"value": "orgh",
 						"type": "text"
 					},
 					{
