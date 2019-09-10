@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6ed798fd-e00c-46c4-81e8-8de274930732",
+		"_postman_id": "8993a43b-3f43-45a2-a838-52dbae1ee9a1",
 		"name": "ACDC phase 1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -163,6 +163,42 @@
 					"body": ""
 				},
 				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"billConfigId\": \"<long>\",\n    \"chainTypeCode\": \"<string>\",\n    \"cityCode\": \"<string>\",\n    \"commissionReq\": {\n        \"services\": [\n            {\n                \"commList\": [\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    },\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    }\n                ],\n                \"gameId\": \"<integer>\",\n                \"serviceCode\": \"<string>\"\n            },\n            {\n                \"commList\": [\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    },\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    }\n                ],\n                \"gameId\": \"<integer>\",\n                \"serviceCode\": \"<string>\"\n            }\n        ]\n    },\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgName\": \"<string>\",\n    \"orgTypeCode\": \"<string>\",\n    \"parentAgtOrgId\": \"<long>\",\n    \"parentMagtOrgId\": \"<long>\",\n    \"parentSagtOrgId\": \"<long>\",\n    \"phoneNumber\": \"<string>\",\n    \"regionCode\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"stateCode\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"walletMode\": \"<string>\",\n    \"walletType\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doOrgRegistration"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
 					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
@@ -224,42 +260,6 @@
 					},
 					"status": "Forbidden",
 					"code": 403,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Created",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"billConfigId\": \"<long>\",\n    \"chainTypeCode\": \"<string>\",\n    \"cityCode\": \"<string>\",\n    \"commissionReq\": {\n        \"services\": [\n            {\n                \"commList\": [\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    },\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    }\n                ],\n                \"gameId\": \"<integer>\",\n                \"serviceCode\": \"<string>\"\n            },\n            {\n                \"commList\": [\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    },\n                    {\n                        \"commValue\": \"<string>\",\n                        \"txnType\": \"<string>\"\n                    }\n                ],\n                \"gameId\": \"<integer>\",\n                \"serviceCode\": \"<string>\"\n            }\n        ]\n    },\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgName\": \"<string>\",\n    \"orgTypeCode\": \"<string>\",\n    \"parentAgtOrgId\": \"<long>\",\n    \"parentMagtOrgId\": \"<long>\",\n    \"parentSagtOrgId\": \"<long>\",\n    \"phoneNumber\": \"<string>\",\n    \"regionCode\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"stateCode\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"walletMode\": \"<string>\",\n    \"walletType\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doOrgRegistration"
-					},
-					"status": "Created",
-					"code": 201,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -429,42 +429,6 @@
 					"body": ""
 				},
 				{
-					"name": "Forbidden",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"orgName\": \"<string>\",\n    \"orgTypeCode\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doOrgSearch"
-					},
-					"status": "Forbidden",
-					"code": 403,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
 					"name": "OK",
 					"originalRequest": {
 						"method": "POST",
@@ -535,6 +499,42 @@
 					],
 					"cookie": [],
 					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"orgName\": \"<string>\",\n    \"orgTypeCode\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doOrgSearch"
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
 				}
 			]
 		},
@@ -546,7 +546,6 @@
 					"script": {
 						"id": "bd3337fb-1de2-43a4-b53f-142d8183da28",
 						"exec": [
-							"postman.setNextRequest(\"GET Token For Credit Limit Approve\");",
 							"",
 							"",
 							"//get Token use JSON.PARSE",
@@ -590,42 +589,6 @@
 			},
 			"response": [
 				{
-					"name": "OK",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"billConfigId\": \"<long>\",\n    \"creditLimit\": \"<double>\",\n    \"orgId\": \"<long>\",\n    \"remark\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/raiseCreditConfigChangeRequest"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
-				},
-				{
 					"name": "Created",
 					"originalRequest": {
 						"method": "POST",
@@ -660,6 +623,42 @@
 					],
 					"cookie": [],
 					"body": ""
+				},
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"billConfigId\": \"<long>\",\n    \"creditLimit\": \"<double>\",\n    \"orgId\": \"<long>\",\n    \"remark\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/raiseCreditConfigChangeRequest"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
 				},
 				{
 					"name": "Not Found",
@@ -698,42 +697,6 @@
 					"body": ""
 				},
 				{
-					"name": "Unauthorized",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"billConfigId\": \"<long>\",\n    \"creditLimit\": \"<double>\",\n    \"orgId\": \"<long>\",\n    \"remark\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/raiseCreditConfigChangeRequest"
-					},
-					"status": "Unauthorized",
-					"code": 401,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
 					"name": "Forbidden",
 					"originalRequest": {
 						"method": "POST",
@@ -759,6 +722,42 @@
 					},
 					"status": "Forbidden",
 					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"billConfigId\": \"<long>\",\n    \"creditLimit\": \"<double>\",\n    \"orgId\": \"<long>\",\n    \"remark\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/raiseCreditConfigChangeRequest"
+					},
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -952,78 +951,6 @@
 			},
 			"response": [
 				{
-					"name": "Get token",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "userName",
-								"value": "Hrishabh",
-								"type": "text"
-							},
-							{
-								"key": "password",
-								"value": "12121212",
-								"type": "text"
-							},
-							{
-								"key": "clientId",
-								"value": "RMS",
-								"type": "text"
-							},
-							{
-								"key": "clientSecret",
-								"value": "ph2Nj5knd4IjWBVLc4mhmYHo1hQDEdS3FlIC2KskHpeHFhsqxD",
-								"type": "text"
-							}
-						],
-						"url": "http://192.168.134.210:8081/RMS/get/token"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "X-XSS-Protection",
-							"value": "1; mode=block"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, no-store, max-age=0, must-revalidate"
-						},
-						{
-							"key": "Pragma",
-							"value": "no-cache"
-						},
-						{
-							"key": "Expires",
-							"value": "0"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json;charset=UTF-8"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 20 Aug 2019 09:19:27 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"responseCode\": 0,\n    \"responseMessage\": \"Success\",\n    \"responseData\": {\n        \"message\": \"Success\",\n        \"statusCode\": 0,\n        \"authToken\": \"SSrQcITWTBemkrQaL6KvMF9hbGbma02jYwOblFTceAU\",\n        \"timestamp\": \"2019-08-20T14:49:28\",\n        \"expiryTime\": \"Tue Aug 20 16:49:28 IST 2019\",\n        \"issueAt\": \"Tue Aug 20 14:49:28 IST 2019\",\n        \"userId\": 165\n    }\n}"
-				},
-				{
 					"name": "GET OAUTH TOKEN",
 					"originalRequest": {
 						"method": "GET",
@@ -1099,6 +1026,78 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"responseCode\": 0,\n    \"responseMessage\": \"Success\",\n    \"responseData\": {\n        \"message\": \"Success\",\n        \"statusCode\": 0,\n        \"authToken\": \"o_OxC772NQhyGINLTcrIbUO6WdhAjBY6cWnN7CY0SFc\",\n        \"timestamp\": \"2019-08-26T18:22:19\",\n        \"expiryTime\": \"Mon Aug 26 20:22:19 IST 2019\",\n        \"issueAt\": \"Mon Aug 26 18:22:19 IST 2019\",\n        \"userId\": 20\n    }\n}"
+				},
+				{
+					"name": "Get token",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userName",
+								"value": "Hrishabh",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "12121212",
+								"type": "text"
+							},
+							{
+								"key": "clientId",
+								"value": "RMS",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "ph2Nj5knd4IjWBVLc4mhmYHo1hQDEdS3FlIC2KskHpeHFhsqxD",
+								"type": "text"
+							}
+						],
+						"url": "http://192.168.134.210:8081/RMS/get/token"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Aug 2019 09:19:27 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": 0,\n    \"responseMessage\": \"Success\",\n    \"responseData\": {\n        \"message\": \"Success\",\n        \"statusCode\": 0,\n        \"authToken\": \"SSrQcITWTBemkrQaL6KvMF9hbGbma02jYwOblFTceAU\",\n        \"timestamp\": \"2019-08-20T14:49:28\",\n        \"expiryTime\": \"Tue Aug 20 16:49:28 IST 2019\",\n        \"issueAt\": \"Tue Aug 20 14:49:28 IST 2019\",\n        \"userId\": 165\n    }\n}"
 				}
 			]
 		},
@@ -1144,6 +1143,42 @@
 			},
 			"response": [
 				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orgId\": \"<long>\",\n    \"requestId\": \"<long>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/updateCreditConfig"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
 					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
@@ -1169,42 +1204,6 @@
 					},
 					"status": "Unauthorized",
 					"code": 401,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Created",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"orgId\": \"<long>\",\n    \"requestId\": \"<long>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/updateCreditConfig"
-					},
-					"status": "Created",
-					"code": 201,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -1288,7 +1287,7 @@
 					"body": ""
 				},
 				{
-					"name": "Not Found",
+					"name": "Created",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -1311,8 +1310,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/updateCreditConfig"
 					},
-					"status": "Not Found",
-					"code": 404,
+					"status": "Created",
+					"code": 201,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -1333,7 +1332,6 @@
 					"script": {
 						"id": "2801a3f4-65b7-46d5-a2b6-36f45f415209",
 						"exec": [
-							"postman.setNextRequest(\"User Search API\");",
 							"",
 							"// TEST CASE-6, For Json Value validation.",
 							" var jsonData = pm.response.json();",
@@ -1419,7 +1417,7 @@
 					"script": {
 						"id": "54f2e09d-3c5a-46dc-94c9-1f2094d39c3c",
 						"exec": [
-							"postman.setNextRequest(\"Update User Details\");",
+							"//postman.setNextRequest(\"Update User Details\");",
 							"",
 							"",
 							"var JsonData = JSON.parse(responseBody);",
@@ -1460,7 +1458,7 @@
 			},
 			"response": [
 				{
-					"name": "OK",
+					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -1483,17 +1481,17 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doUserSearch"
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
 					"header": [
 						{
 							"key": "Content-Type",
-							"value": "application/json"
+							"value": "text/plain"
 						}
 					],
 					"cookie": [],
-					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
+					"body": ""
 				},
 				{
 					"name": "Not Found",
@@ -1532,78 +1530,6 @@
 					"body": ""
 				},
 				{
-					"name": "Forbidden",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"userId\": \"<long>\",\n    \"userName\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doUserSearch"
-					},
-					"status": "Forbidden",
-					"code": 403,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Unauthorized",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"userId\": \"<long>\",\n    \"userName\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doUserSearch"
-					},
-					"status": "Unauthorized",
-					"code": 401,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
 					"name": "Created",
 					"originalRequest": {
 						"method": "POST",
@@ -1629,6 +1555,78 @@
 					},
 					"status": "Created",
 					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"userId\": \"<long>\",\n    \"userName\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doUserSearch"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"userId\": \"<long>\",\n    \"userName\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doUserSearch"
+					},
+					"status": "Forbidden",
+					"code": 403,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -1670,7 +1668,7 @@
 			},
 			"response": [
 				{
-					"name": "Unauthorized",
+					"name": "Created",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -1693,80 +1691,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/updateUserDetails"
 					},
-					"status": "Unauthorized",
-					"code": 401,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "OK",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"city\": \"<string>\",\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"password\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"state\": \"<string>\",\n    \"userId\": \"<long>\",\n    \"username\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/updateUserDetails"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
-				},
-				{
-					"name": "Not Found",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"city\": \"<string>\",\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"password\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"state\": \"<string>\",\n    \"userId\": \"<long>\",\n    \"username\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/updateUserDetails"
-					},
-					"status": "Not Found",
-					"code": 404,
+					"status": "Created",
+					"code": 201,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -1814,7 +1740,7 @@
 					"body": ""
 				},
 				{
-					"name": "Created",
+					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -1837,8 +1763,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/updateUserDetails"
 					},
-					"status": "Created",
-					"code": 201,
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -1848,6 +1774,78 @@
 					],
 					"cookie": [],
 					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"city\": \"<string>\",\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"password\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"state\": \"<string>\",\n    \"userId\": \"<long>\",\n    \"username\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/updateUserDetails"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"city\": \"<string>\",\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"password\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"state\": \"<string>\",\n    \"userId\": \"<long>\",\n    \"username\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/updateUserDetails"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
 				}
 			]
 		},
@@ -1859,7 +1857,7 @@
 					"script": {
 						"id": "54f2e09d-3c5a-46dc-94c9-1f2094d39c3c",
 						"exec": [
-							"postman.setNextRequest(\"Update User Details\");",
+							"//postman.setNextRequest(\"Update User Details\");",
 							"",
 							"",
 							"var JsonData = JSON.parse(responseBody);",
@@ -1900,6 +1898,42 @@
 			},
 			"response": [
 				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"userId\": \"<long>\",\n    \"userName\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doUserSearch"
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
 					"name": "Not Found",
 					"originalRequest": {
 						"method": "POST",
@@ -1925,42 +1959,6 @@
 					},
 					"status": "Not Found",
 					"code": 404,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Unauthorized",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"domainId\": \"<long>\",\n    \"emailId\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"userId\": \"<long>\",\n    \"userName\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doUserSearch"
-					},
-					"status": "Unauthorized",
-					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -2044,7 +2042,7 @@
 					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
 				},
 				{
-					"name": "Forbidden",
+					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -2067,8 +2065,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doUserSearch"
 					},
-					"status": "Forbidden",
-					"code": 403,
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -2110,42 +2108,6 @@
 			},
 			"response": [
 				{
-					"name": "Not Found",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"city\": \"<string>\",\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"password\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"state\": \"<string>\",\n    \"userId\": \"<long>\",\n    \"username\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/updateUserDetails"
-					},
-					"status": "Not Found",
-					"code": 404,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
 					"name": "Forbidden",
 					"originalRequest": {
 						"method": "POST",
@@ -2207,6 +2169,42 @@
 					},
 					"status": "Unauthorized",
 					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressOne\": \"<string>\",\n    \"addressTwo\": \"<string>\",\n    \"altMobileNumber\": \"<string>\",\n    \"city\": \"<string>\",\n    \"contactPerson\": \"<string>\",\n    \"countryCode\": \"<string>\",\n    \"emailId\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"middleName\": \"<string>\",\n    \"mobileNumber\": \"<string>\",\n    \"password\": \"<string>\",\n    \"regionIds\": [\n        \"<integer>\",\n        \"<integer>\"\n    ],\n    \"state\": \"<string>\",\n    \"userId\": \"<long>\",\n    \"username\": \"<string>\",\n    \"warehouseId\": \"<long>\",\n    \"zipCode\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/updateUserDetails"
+					},
+					"status": "Not Found",
+					"code": 404,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -2662,7 +2660,7 @@
 					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
 				},
 				{
-					"name": "Unauthorized",
+					"name": "Forbidden",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -2685,8 +2683,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doCreditNote"
 					},
-					"status": "Unauthorized",
-					"code": 401,
+					"status": "Forbidden",
+					"code": 403,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -2734,7 +2732,7 @@
 					"body": ""
 				},
 				{
-					"name": "Forbidden",
+					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -2757,8 +2755,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doCreditNote"
 					},
-					"status": "Forbidden",
-					"code": 403,
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -2859,7 +2857,7 @@
 			},
 			"response": [
 				{
-					"name": "Unauthorized",
+					"name": "OK",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -2882,17 +2880,17 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doDebitNote"
 					},
-					"status": "Unauthorized",
-					"code": 401,
-					"_postman_previewlanguage": "text",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
 					"header": [
 						{
 							"key": "Content-Type",
-							"value": "text/plain"
+							"value": "application/json"
 						}
 					],
 					"cookie": [],
-					"body": ""
+					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
 				},
 				{
 					"name": "Created",
@@ -2931,7 +2929,7 @@
 					"body": ""
 				},
 				{
-					"name": "OK",
+					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -2954,17 +2952,17 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doDebitNote"
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
 					"header": [
 						{
 							"key": "Content-Type",
-							"value": "application/json"
+							"value": "text/plain"
 						}
 					],
 					"cookie": [],
-					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
+					"body": ""
 				},
 				{
 					"name": "Not Found",
@@ -3164,42 +3162,6 @@
 					"body": ""
 				},
 				{
-					"name": "Forbidden",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"amount\": \"<string>\",\n    \"appType\": \"<string>\",\n    \"clientIp\": \"<string>\",\n    \"device\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"remarks\": \"<string>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doPayment"
-					},
-					"status": "Forbidden",
-					"code": 403,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
 					"name": "OK",
 					"originalRequest": {
 						"method": "POST",
@@ -3261,6 +3223,42 @@
 					},
 					"status": "Created",
 					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": \"<string>\",\n    \"appType\": \"<string>\",\n    \"clientIp\": \"<string>\",\n    \"device\": \"<string>\",\n    \"orgId\": \"<long>\",\n    \"remarks\": \"<string>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doPayment"
+					},
+					"status": "Forbidden",
+					"code": 403,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -3396,7 +3394,7 @@
 			},
 			"response": [
 				{
-					"name": "Unauthorized",
+					"name": "Created",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -3419,8 +3417,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doIntraOrgPayment"
 					},
-					"status": "Unauthorized",
-					"code": 401,
+					"status": "Created",
+					"code": 201,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -3468,42 +3466,6 @@
 					"body": ""
 				},
 				{
-					"name": "OK",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"amount\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"txnTypeCode\": \"<string>\",\n    \"userId\": \"<long>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/doIntraOrgPayment"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
-				},
-				{
 					"name": "Not Found",
 					"originalRequest": {
 						"method": "POST",
@@ -3540,7 +3502,7 @@
 					"body": ""
 				},
 				{
-					"name": "Created",
+					"name": "Unauthorized",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -3563,8 +3525,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/doIntraOrgPayment"
 					},
-					"status": "Created",
-					"code": 201,
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -3574,6 +3536,42 @@
 					],
 					"cookie": [],
 					"body": ""
+				},
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"txnTypeCode\": \"<string>\",\n    \"userId\": \"<long>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/doIntraOrgPayment"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
 				}
 			]
 		},
@@ -3647,108 +3645,6 @@
 			},
 			"response": [
 				{
-					"name": "Unauthorized",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/v1.0/getUserAcount?userId=<long>&languageCode=en&appType=Web_Panel",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1.0",
-								"getUserAcount"
-							],
-							"query": [
-								{
-									"key": "userId",
-									"value": "<long>"
-								},
-								{
-									"key": "languageCode",
-									"value": "en"
-								},
-								{
-									"key": "appType",
-									"value": "Web_Panel"
-								}
-							]
-						}
-					},
-					"status": "Unauthorized",
-					"code": 401,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Forbidden",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/v1.0/getUserAcount?userId=<long>&languageCode=en&appType=Web_Panel",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1.0",
-								"getUserAcount"
-							],
-							"query": [
-								{
-									"key": "userId",
-									"value": "<long>"
-								},
-								{
-									"key": "languageCode",
-									"value": "en"
-								},
-								{
-									"key": "appType",
-									"value": "Web_Panel"
-								}
-							]
-						}
-					},
-					"status": "Forbidden",
-					"code": 403,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
 					"name": "OK",
 					"originalRequest": {
 						"method": "GET",
@@ -3840,6 +3736,108 @@
 					},
 					"status": "Not Found",
 					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1.0/getUserAcount?userId=<long>&languageCode=en&appType=Web_Panel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1.0",
+								"getUserAcount"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "<long>"
+								},
+								{
+									"key": "languageCode",
+									"value": "en"
+								},
+								{
+									"key": "appType",
+									"value": "Web_Panel"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1.0/getUserAcount?userId=<long>&languageCode=en&appType=Web_Panel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1.0",
+								"getUserAcount"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "<long>"
+								},
+								{
+									"key": "languageCode",
+									"value": "en"
+								},
+								{
+									"key": "appType",
+									"value": "Web_Panel"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -3929,6 +3927,42 @@
 					"body": ""
 				},
 				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": {
+									"content": "Bearer Token",
+									"type": "text/plain"
+								},
+								"key": "Authorization",
+								"value": "Bearer XXXX"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"settleAction\": \"<string>\",\n    \"settleAmount\": \"<string>\",\n    \"userId\": \"<long>\"\n}"
+						},
+						"url": "{{baseUrl}}/v1.0/settleUserAccount"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
 					"name": "OK",
 					"originalRequest": {
 						"method": "POST",
@@ -3963,42 +3997,6 @@
 					],
 					"cookie": [],
 					"body": "{\n \"responseCode\": \"<integer>\",\n \"responseData\": \"<object>\",\n \"responseMessage\": \"<string>\"\n}"
-				},
-				{
-					"name": "Forbidden",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"description": {
-									"content": "Bearer Token",
-									"type": "text/plain"
-								},
-								"key": "Authorization",
-								"value": "Bearer XXXX"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"settleAction\": \"<string>\",\n    \"settleAmount\": \"<string>\",\n    \"userId\": \"<long>\"\n}"
-						},
-						"url": "{{baseUrl}}/v1.0/settleUserAccount"
-					},
-					"status": "Forbidden",
-					"code": 403,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
 				},
 				{
 					"name": "Created",
@@ -4037,7 +4035,7 @@
 					"body": ""
 				},
 				{
-					"name": "Not Found",
+					"name": "Forbidden",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -4060,8 +4058,8 @@
 						},
 						"url": "{{baseUrl}}/v1.0/settleUserAccount"
 					},
-					"status": "Not Found",
-					"code": 404,
+					"status": "Forbidden",
+					"code": 403,
 					"_postman_previewlanguage": "text",
 					"header": [
 						{
@@ -4101,60 +4099,6 @@
 					}
 				],
 				"url": "{{baseUrl}}/v1.0/generateBill"
-			},
-			"response": []
-		},
-		{
-			"name": "backoffice token Copy",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "d59a2b03-3aec-4dff-89f7-9c727ee746f0",
-						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"var backToken=jsonData.responseData.authToken;",
-							"pm.environment.set(\"backtoken\", backToken);",
-							"",
-							"pm.test(\"status code check \"+jsonData.responseData.statusCode, function () {",
-							"   pm.expect(+jsonData.responseData.statusCode).to.eql(0);",
-							"});",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "userName",
-						"value": "mrbean",
-						"type": "text"
-					},
-					{
-						"key": "password",
-						"value": "12345678",
-						"type": "text"
-					},
-					{
-						"key": "clientId",
-						"value": "RMS",
-						"type": "text"
-					},
-					{
-						"key": "clientSecret",
-						"value": "ph2Nj5knd4IjWBVLc4mhmYHo1hQDEdS3FlIC2KskHpeHFhsqxD",
-						"type": "text"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": "{{baseUrl}}/get/token"
 			},
 			"response": []
 		}
